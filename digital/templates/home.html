@@ -1,0 +1,337 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Your description">
+    <meta name="author" content="Your name">
+
+    <!--Webpage Title-->
+    <title>J.J. Enterprises</title>
+
+    <!--Styles-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+    <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet">
+    <link href="{% static 'css/fontawesome-all.css' %}" rel="stylesheet">
+    <link href="{% static 'css/style2.css' %}" rel="stylesheet">
+
+    <!-- Favicon  -->
+    <link rel="icon" href="{% static 'images/favicon.ico' %}">
+</head>
+<body>
+
+    <!--Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-default bg-dark fixed-top">
+        <div class="container-fluid">
+            <!--Logo-->
+            <a class="navbar-brand logo-image" href="home"><img src="{% static 'images/logo(web)2.png' %}" alt="alternative">J.J. Enterprises</a>
+
+           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fas fa-bars fa-2x" aria-hidden="true"></i>
+              </button>
+            
+              <div class="collapse navbar-collapse" id="navbarSupportedContent" style="float: right;">
+                <ul class="navbar-nav ml-auto">
+                  <li class="nav-item active">
+                    <a class="nav-link" href="home"><span>Home </span></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#about_us"><span>About Us </span></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#contact"><span>Contact Us </span></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#gallery"><span>Gallery </span></a>
+                  </li>
+                </ul>
+              </div>
+        </div><!--End of Container-->
+    </nav><!--End of Navigation-->
+
+    <div class="parallax">
+      <div class="container-fluid">
+        <div class="content" style="padding-top: 360px; padding-left: 600px; letter-spacing: 10px;">
+          <div class="row">
+            <div class="col-lg-9 box">
+              <h1 class="intro">
+                <span class="blc">PROMOTING YOUR</span>
+                <span class="txt-type" data-wait="3000" data-words='["VISION","FUTURE","DREAM"]'>
+                </span>
+              </h1>    
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="about_us" class="about_us" style="height: auto; background-color: whitesmoke; font-size:36px">
+        <h3 class="abt-logo" style="font-size: 35px; text-align: center;">About Us</h3>
+        <p class="about">J.J. Enterprises is an integrated advertisement services firm with Events & Promotions as our main forte. We believe in creativity, innovation and commitment. We spread our wings through Events & Promotions, Road Shows, Signages, Digital marketing, Out-of-home marketing, Paper insert, Leafleting, Shop-front activities geographically covering entire North-Eastern region in India. Experienced professionals and a highly motivated team of experts from the media and events industry form the success pillars of J.J. Enterprises.
+        </p>
+    </div>
+
+    <div class="parallax1">
+      <h1 class="dsp">Give us a chance so that we can boost your business forward!</h1>
+    </div>
+
+    <div id="contact" class="contactForm" style="height: auto ;background-color: whitesmoke;font-size:36px">
+      <h3 style="font-size: 35px; text-align: center;">Contact Us</h3>
+        <section>
+          <div class="container">
+              <div class="contactInfo">
+                <div>
+                  <h2>Contact Info</h2>
+                  <ul class="info">
+                    <li>
+                      <span><img src="{% static 'images/location.png' %}"></span>
+                      <span>Shanti Nagar, Lalganesh, Guwahati, Assam.
+                      <br>Pin: 781034
+                      </span>
+                    </li>
+                    <li>
+                      <span><img src="{% static 'images/mail.png' %}"></span>
+                      <span><a href="mailto:jenterprises259@gmail.com">jenterprises279@gmail.com</a></span>
+                    </li>
+                    <li>
+                      <span><img src="{% static 'images/call.png' %}"></span>
+                      <span>8638804040, 7002514819
+                      </span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            <div class="contactUs">
+              <h2>Send a Message</h2>
+              <form method="POST" action="/" onsubmit="generateDate()">
+                {% csrf_token %}
+                <div class="formBox">
+                  <div class="inputBox w50">
+                    <input type="text" name="name" required><span>Your Name</span>
+                  </div>
+                  <div class="inputBox w50">
+                    <input type="text" name="company" required><span>Company Name</span>
+                  </div>
+                  <div class="inputBox w50">
+                    <input type="email" name="email_id" required><span>Email ID</span>
+                  </div>
+                  <div class="inputBox w50">
+                    <input type="text" name="phone" required><span>Phone</span>
+                  </div>
+                  <div class="inputBox w100">
+                    <textarea name="message" required></textarea><span>Write your message...</span>
+                  </div>
+                  <div class="inputBox w100">
+                    <input type="submit" value="Send">
+                  </div>
+                  <div class="inputBox w100">
+                    <input type="hidden" name="date" id="dateHidden">
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+       </section>
+    </div>
+
+    <div class="parallax2"></div>
+
+    <div id="gallery" class="gallery" style="height:auto; background-color: whitesmoke; font-size:36px">
+      <input class="photo-radio" type="radio" name="Photos" id="check1" checked>
+      <input class="photo-radio" type="radio" name="Photos" id="check2">
+      <input class="photo-radio" type="radio" name="Photos" id="check3">
+      <div class="container" style="padding-bottom: 20px;">
+        <h3 class="gallery-intro" style="font-size: 35px; text-align: center;">Gallery</h3>
+        <div class="top-content" style="margin-top: 50px;">
+          <h4>OUR VENTURES</h4>
+          <label for="check1">All Photos</label>
+          <label for="check2">Road Shows</label>
+          <label for="check3">Events</label>
+        </div>
+
+        <div class="photo-gallery">
+          <div class="pic rds">
+            <img src="{% static 'images/road_show/road1.jpg' %}" alt="Road Show Pic">
+          </div>
+          <div class="pic rds">
+            <img src="{% static 'images/road_show/road2.jpg' %}" alt="Road Show Pic">
+          </div>
+          <div class="pic rds">
+            <img src="{% static 'images/road_show/road3.jpg' %}" alt="Road Show Pic">
+          </div>
+          <div class="pic rds">
+            <img src="{% static 'images/road_show/road4.jpg' %}" alt="Road Show Pic">
+          </div>
+          <div class="pic rds">
+            <img src="{% static 'images/road_show/road5.jpg' %}" alt="Road Show Pic">
+          </div>
+          <div class="pic rds">
+            <img src="{% static 'images/road_show/road6.jpg' %}" alt="Road Show Pic">
+          </div>
+          <div class="pic rds">
+            <img src="{% static 'images/road_show/road7.jpg' %}" alt="Road Show Pic">
+          </div>
+          <div class="pic rds">
+            <img src="{% static 'images/road_show/road8.jpg' %}" alt="Road Show Pic">
+          </div>
+          <div class="pic rds">
+            <img src="{% static 'images/road_show/road9.jpg' %}" alt="Road Show Pic">
+          </div>
+          <div class="pic rds">
+            <img src="{% static 'images/road_show/road10.jpg' %}" alt="Road Show Pic">
+          </div>
+          <div class="pic rds">
+            <img src="{% static 'images/road_show/road11.jpg' %}" alt="Road Show Pic">
+          </div>
+          <div class="pic rds">
+            <img src="{% static 'images/road_show/road12.jpg' %}" alt="Road Show Pic">
+          </div>
+          <div class="pic rds">
+            <img src="{% static 'images/road_show/road13.jpg' %}" alt="Road Show Pic">
+          </div>
+          <div class="pic events">
+            <img src="{% static 'images/events/events1.jpg' %}" alt="Events Pic">
+          </div>
+          <div class="pic events">
+            <img src="{% static 'images/events/events2.jpg' %}" alt="Events Pic">
+          </div>
+          <div class="pic events">
+            <img src="{% static 'images/events/events3.jpg' %}" alt="Events Pic">
+          </div>
+          <div class="pic events">
+            <img src="{% static 'images/events/events4.jpg' %}" alt="Events Pic">
+          </div>
+          <div class="pic events">
+            <img src="{% static 'images/events/events5.jpg' %}" alt="Events Pic">
+          </div>
+          <div class="pic events">
+            <img src="{% static 'images/events/events6.jpg' %}" alt="Events Pic">
+          </div>
+        </div>
+      </div>
+    </div>
+
+   <div class="parallax3">
+      <div class="client-area">
+        <div class="container">
+          <h2>Our <span>Clients</span></h2>
+          <section class="logo-area slider">
+            <div class="slide"><img src="{% static 'images/Logo/asus.png' %}"></div>
+            <div class="slide"><img src="{% static 'images/Logo/bkt.png' %}"></div>
+            <div class="slide"><img src="{% static 'images/Logo/dalmia.png' %}"></div>
+            <div class="slide"><img src="{% static 'images/Logo/lg.png' %}"></div>
+            <div class="slide"><img src="{% static 'images/Logo/mobel.png' %}"></div>
+            <div class="slide"><img src="{% static 'images/Logo/pnb.png' %}"></div>
+            <div class="slide"><img src="{% static 'images/Logo/redbull.png' %}"></div>
+            <div class="slide"><img src="{% static 'images/Logo/reliance.png' %}"></div>
+            <div class="slide"><img src="{% static 'images/Logo/samsung.png' %}"></div>
+          </section>
+        </div>
+      </div>
+    </div>
+
+   <footer>
+      <div class="container-fluid">
+        <div class="sec abtus">
+          <h4 class="head" style="color: white;">About Us</h4>
+          <p style="text-align: justify;">J.J. Enterprises is an integrated advertisement services firm with Events & Promotions as our main forte. We believe in creativity, innovation and commitment. We spread our wings through Events & Promotions, Road Shows, Signages, Digital marketing, Out-of-home marketing, Paper insert, Leafleting, Shop-front activities geographically covering entire North-Eastern region in India. Experienced professionals and a highly motivated team of experts from the media and events industry form the success pillars of J.J. Enterprises.</p>
+        </div>
+        <div class="sec quicklinks">
+          <h4 class="head">Quick Links</h4>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Gallery</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="sec contact">
+          <h4 class="head">Contact Info</h4>
+          <ul class="info">
+            <li>
+              <span><i class="fas fa-map-marked"></i></span>
+              <span>Shanti Nagar, Lalganesh, Guwahati, Assam. <br>Pin: 781034 </span>
+            </li>
+            <li>
+              <span><i class="fas fa-phone-volume"></i></span>
+              <span>8638804040, 7002514819</span>
+            </li>
+            <li>
+              <span><i class="fas fa-envelope-open-text"></i></span>
+              <p><a href="mailto:jenterprises259@gmail.com">jenterprises279@gmail.com</a></p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <div class="copyright">
+      <p>Copyright © 2021 J.J. Enterprise. All Rights Reserved.</p>
+      <p>Powered by Django. Designed by <a href="https://www.facebook.com/gobinda.deb.3/">Gobinda Deb</a></p>
+    </div>
+
+
+    <!--Java Scripts-->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="../static/js/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.js"></script>
+    <script>
+        const btn = document.querySelector('a');
+        btn.onmousemove = function(event){
+            const x = event.pageX - btn.offsetLeft;
+            const y = event.pageY - btn.offsetTop;
+    
+            btn.style.setProperty('--x', x + 'px');
+            btn.style.setProperty('--y', y + 'px');
+        }
+    </script>
+    <script>
+        $(window).scroll(function(){
+            $('nav').toggleClass('scrolled', $(this).scrollTop() > 200);
+        });
+
+        function myFunction() {
+          var element = document.getElementById("intro");
+          element.classList.remove("is-hidden");
+        }
+    </script>
+    <script>
+        $(document).ready(function (){
+          $('.logo-area').slick({
+            slidesToShow: 6,
+            slidesToScroll: 6,
+            autoplay: true,
+            autoplaySpeed: 1500,
+            arrows: false,
+            dots: false,
+            pauseOnHover: true,
+            responsive: [{
+              breakpoint: 768,
+              settings: {
+                slidesToShow: 4
+              }
+            },{
+              breakpoint: 520,
+              settings: {
+                slidesToShow: 3
+              }
+            }]
+          });
+        })
+    </script>
+    <script>
+      function generateDate(){
+        var currentTime = new Date();               
+        var curdate = currentTime.getDate() +'/'+(currentTime.getMonth()+1)+'/'+currentTime.getFullYear() +'// '+ currentTime.getHours()+':'+currentTime.getMinutes();
+        document.getElementById("dateHidden").value = curdate;
+        return curdate;
+    }
+    </script>
+
+</body>
+</html>
